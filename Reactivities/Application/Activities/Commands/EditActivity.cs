@@ -22,8 +22,8 @@ namespace Application.Activities.Commands
             public async Task Handle(Command request, CancellationToken cancellationToken)
             {
                 var activity = await context.Activities
-                    .FindAsync([request.Activity.Id], cancellationToken) ?? 
-                        throw new Exception("Cannot find activity");
+                    .FindAsync([request.Activity.Id], cancellationToken) 
+                    ?? throw new Exception("Cannot find activity");
 
                 mapper.Map(request.Activity, activity);
                 await context.SaveChangesAsync(cancellationToken);   
