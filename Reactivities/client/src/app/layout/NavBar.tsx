@@ -34,6 +34,7 @@ const NavBar = () => {
                 </Typography>
               </MenuItem>
             </Box>
+            
             <Box sx={{ display: 'flex' }}>
               <MenuItemLink to="/activities">Activities</MenuItemLink>
               <MenuItemLink to="/createActivity">Create Activity</MenuItemLink>
